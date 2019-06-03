@@ -21,6 +21,14 @@ function factorial(x) {
 //factorial(5);
 
 //3. Star Art : 
-function starArt() {
-	
+function drawLeftStars(x = 5) {
+	var str = "";
+	var i = 1;
+	while (i <= x) {
+		str += "*";
+		i++;
+	}
+	console.log(str);
 }
+
+drawLeftStars();
