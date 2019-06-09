@@ -50,12 +50,20 @@ drawRightStars();
 
 function drawCenteredStars(x = 15)  {
 	var str = "";
-	var spaces = 75 - (x*2);
+	var spaces = 75 - (x*2) - x;
 	console.log(spaces);
 	for (var i = 1; i <=spaces; i++) {
-		code
+		str += ".";
 	}
 	
+	for (var j = 1; j <= x; j++) {
+		str += "*";
+	}
+	for (var k = 1; k <=spaces; k++) {
+		str += ".";
+	}
+	console.log(str);
 }
 
 drawCenteredStars();
+
