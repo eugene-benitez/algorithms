@@ -32,3 +32,30 @@ function drawLeftStars(x = 5) {
 }
 
 drawLeftStars();
+
+function drawRightStars(x = 5) {
+	var str = "";
+	var spaces = 75 - x;
+	for (var i = 1; i <= spaces; i++) {
+		str += ".";
+	}
+	for (var j = 1; j <= x; j++) {
+		str += "*";
+	}
+	console.log(str);
+//	console.log(str.length);
+}
+
+drawRightStars();
+
+function drawCenteredStars(x = 15)  {
+	var str = "";
+	var spaces = 75 - (x*2);
+	console.log(spaces);
+	for (var i = 1; i <=spaces; i++) {
+		code
+	}
+	
+}
+
+drawCenteredStars();
