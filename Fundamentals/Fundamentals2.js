@@ -57,4 +57,14 @@ function twelveBarBlues(x=12) {
 
 //twelveBarBlues();
 
+//5. Is Prime
+function isPrime(value) {
+    for(var i = 2; i < value; i++) {
+        if (value % i === 0) {
+            return console.log("false");
+        }
+    }
+    return console.log("true");
+}
 
+isPrime(5)
