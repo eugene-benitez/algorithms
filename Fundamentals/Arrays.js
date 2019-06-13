@@ -19,4 +19,17 @@ function pushFront(arr,val) {
 	}
 }
 
-pushFront(testArr, 0);
+//pushFront(testArr, 0);
+
+//2. Insert At
+function insertAt(arr,at,val) {
+	var lastIndex = arr.length;
+	arr.push(val);
+	console.log(arr);
+	for (var i = at; i <= lastIndex; i++) {
+		swapIndices(i, lastIndex, arr);
+		console.log(arr);
+	}
+}
+
+//insertAt(testArr, 1, 3);
