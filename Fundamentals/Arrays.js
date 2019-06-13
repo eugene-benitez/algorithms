@@ -23,6 +23,7 @@ function pushFront(arr,val) {
 
 //2. Insert At
 function insertAt(arr,at,val) {
+	console.log(arr);
 	var lastIndex = arr.length;
 	arr.push(val);
 	console.log(arr);
@@ -33,3 +34,21 @@ function insertAt(arr,at,val) {
 }
 
 //insertAt(testArr, 1, 3);
+
+
+//3. Pop Front
+function popFront(arr) {
+	console.log(arr);
+	var lastIndex = arr.length;
+	console.log(lastIndex);
+	for (var i = 0; i < lastIndex - 1; i++) {
+		temp = arr[i];
+		console.log(temp);
+		arr[i] = arr[i+1];
+		arr[i+1] = temp;
+	}
+	arr.pop();
+	console.log(arr);
+}
+
+//popFront(testArr);
