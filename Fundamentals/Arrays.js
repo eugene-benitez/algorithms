@@ -1,11 +1,10 @@
 //1. Push Front
-var testArr = [1,2,3,4];
+var testArr = [1,1,2,3,4];
 
 function swapIndices(idx1, idx2, arr) {
 	var temp = arr[idx1];
 	arr[idx1] = arr[idx2];
 	arr[idx2] = temp;
-	console.log("swap is", arr)
 	return arr;
 }
 
@@ -38,12 +37,25 @@ function insertAt(arr,at,val) {
 
 //3. Pop Front
 function popFront(arr) {
-	console.log(arr);
 	var lastIndex = arr.length;
-	console.log(lastIndex);
 	for (var i = 0; i < lastIndex - 1; i++) {
 		temp = arr[i];
-		console.log(temp);
+		arr[i] = arr[i+1];
+		arr[i+1] = temp;
+	}
+	arr.pop();
+	console.log(arr);
+}
+//
+//popFront(testArr);
+
+
+//4. Remove At
+function removeAt(arr,index) {
+	console.log(arr);
+	var length = arr.length - 1;
+	for (var i = 0; i < length; i++) {
+		temp = arr[i];
 		arr[i] = arr[i+1];
 		arr[i+1] = temp;
 	}
@@ -51,4 +63,46 @@ function popFront(arr) {
 	console.log(arr);
 }
 
-//popFront(testArr);
+//removeAt(testArr,2);
+
+//5. Swap Pairs
+
+function swapPairs(idx1, idx2, arr) {
+	var temp = arr[idx1];
+	arr[idx1] = arr[idx2];
+	arr[idx2] = temp;
+	console.log("swap is", arr)
+	return arr;
+}
+
+//6. Remove Duplicates
+function removeDuplicates(arr) {
+	var length = arr.length-1;
+	for (var i = 0; i < length; i++) {
+		if (arr[i] == arr[i+1]) {
+			swapIndices(i, length, arr);
+			arr.pop();
+		}
+	}
+	console.log(arr);
+}
+
+//removeDuplicates(testArr);
+
+//7. Min to Front
+function minToFront(arr) {
+	console.log(arr);
+	var length = arr.length-1;
+	var min = arr[0];
+	for (var i = 0; i < length; i++) {
+		if (arr[i] < min) {
+			min = i;
+		}
+	}
+	swapIndices(0, min, arr);
+	console.log(arr);
+}
+
+minToFront([2,3,1,4,5]);
+
+//Unfinished. Numbers does not shift
