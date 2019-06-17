@@ -103,6 +103,19 @@ function minToFront(arr) {
 	console.log(arr);
 }
 
-minToFront([2,3,1,4,5]);
+//minToFront([2,3,1,4,5]);
 
 //Unfinished. Numbers does not shift
+
+//8. Reverse Array
+function reverseArr(arr) {
+	length = arr.length - 1;
+	var end = length;
+	for (var i = 0; i <= length/2; i++) {
+		swapIndices(i, end, arr);
+		end--;
+	}
+	console.log(arr);
+}
+
+reverseArr(testArr);
